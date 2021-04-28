@@ -14,7 +14,7 @@ namespace CustomContentTests
 
         public override string Author => "Dragon";
 
-        public override string LongDescription => "Creates components, meant as examples.";
+        public override string LongDescription => "Creates custom content, meant as examples for ContentMod";
 
         public override string Name => "ComponentTests";
 
