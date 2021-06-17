@@ -6,7 +6,7 @@ namespace CustomContentTests.AutoTurret
     {
         public override PLShipComponent PLAutoTurret => new DragonAutoTurret();
 
-        public override string Name => "MegaDragonCannon";
+        public override string Name => "DragonAutoTurret";
     }
     public class DragonAutoTurret : PLAutoTurret
     {
