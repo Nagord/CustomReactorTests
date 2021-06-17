@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.Missile;
+﻿using PulsarPluginLoader.Content.Components.Missile;
 
 namespace CustomContentTests.Missile
 {

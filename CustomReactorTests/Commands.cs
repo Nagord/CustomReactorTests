@@ -1,23 +1,19 @@
-﻿using ContentMod.Components.Hull;
-using ContentMod.Components.InertiaThruster;
-using ContentMod.Components.Thruster;
-using ContentMod.Components.Reactor;
-using ContentMod.Components.Shield;
-using ContentMod.Components.WarpDrive;
+﻿using PulsarPluginLoader.Content.Components.Hull;
+using PulsarPluginLoader.Content.Components.InertiaThruster;
+using PulsarPluginLoader.Content.Components.Thruster;
+using PulsarPluginLoader.Content.Components.Reactor;
+using PulsarPluginLoader.Content.Components.Shield;
+using PulsarPluginLoader.Content.Components.WarpDrive;
 using PulsarPluginLoader.Chat.Commands.CommandRouter;
 using PulsarPluginLoader.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ContentMod.Components.ManeuverThruster;
-using ContentMod.Components.CaptainsChair;
-using ContentMod.Components.Extractor;
-using ContentMod.Components.Missile;
-using ContentMod.Components.NuclearDevice;
-using ContentMod.Components.MissionShipComponent;
-using ContentMod.Components.Virus;
+using PulsarPluginLoader.Content.Components.ManeuverThruster;
+using PulsarPluginLoader.Content.Components.CaptainsChair;
+using PulsarPluginLoader.Content.Components.Extractor;
+using PulsarPluginLoader.Content.Components.Missile;
+using PulsarPluginLoader.Content.Components.NuclearDevice;
+using PulsarPluginLoader.Content.Components.MissionShipComponent;
+using PulsarPluginLoader.Content.Components.CPU;
+using PulsarPluginLoader.Content.Components.WarpDriveProgram;
 
 namespace CustomReactorTests
 {
@@ -30,7 +26,7 @@ namespace CustomReactorTests
 
         public override string Description()
         {
-            return "runs subcommands. addtoship, addtoinv, dbg, tbdg";
+            return "runs subcommands. addtoship, addtoinv";
         }
 
         public override void Execute(string arguments)
@@ -39,31 +35,36 @@ namespace CustomReactorTests
             switch (args[0].ToLower())
             {
                 default:
-                    Messaging.Notification("Wrong subcommand");
+                    Messaging.Notification("Wrong subcommand. Commands: addtoship, addtoinv");
                     break;
                 case "addtoship":
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(ReactorPluginManager.CreateReactor(ReactorPluginManager.Instance.GetReactorIDFromName("Dragon Reactor"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(ShieldPluginManager.CreateShield(ShieldPluginManager.Instance.GetShieldIDFromName("Dragon Shield"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(HullPluginManager.CreateHull(HullPluginManager.Instance.GetHullIDFromName("Dragon Hull"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(WarpDrivePluginManager.CreateWarpDrive(WarpDrivePluginManager.Instance.GetWarpDriveIDFromName("Dragon WarpDrive"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(ThrusterPluginManager.CreateThruster(ThrusterPluginManager.Instance.GetThrusterIDFromName("Dragon Thruster"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(InertiaThrusterPluginManager.CreateInertiaThruster(InertiaThrusterPluginManager.Instance.GetInertiaThrusterIDFromName("Dragon InertiaThruster"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(ManeuverThrusterPluginManager.CreateManeuverThruster(ManeuverThrusterPluginManager.Instance.GetManeuverThrusterIDFromName("Dragon ManeuverThruster"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(CaptainsChairPluginManager.CreateCaptainsChair(CaptainsChairPluginManager.Instance.GetCaptainsChairIDFromName("Dragon CaptainsChair"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(new CustomContentTests.MegaTurret.DragonMegaTurret(0, 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(ExtractorPluginManager.CreateExtractor(ExtractorPluginManager.Instance.GetExtractorIDFromName("Dragon Extractor"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(MissilePluginManager.CreateMissile(MissilePluginManager.Instance.GetMissileIDFromName("Dragon Missile"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(NuclearDevicePluginManager.CreateNuclearDevice(NuclearDevicePluginManager.Instance.GetNuclearDeviceIDFromName("Dragon NuclearDevice"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(new CustomContentTests.Turret.DragonTurret(0, 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(new CustomContentTests.HullPlating.DragonHullPlating(0, 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(MissionShipComponentPluginManager.CreateMissionShipComponent(MissionShipComponentPluginManager.Instance.GetMissionShipComponentIDFromName("Dragon MissionShipComponent"), 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(new CustomContentTests.AutoTurret.DragonAutoTurret(0, 0), -1, ESlotType.E_COMP_NONE);
-                    PLNetworkManager.Instance.MyLocalPawn.CurrentShip.MyStats.AddShipComponent(VirusPluginManager.CreateVirus(VirusPluginManager.Instance.GetVirusIDFromName("Dragon Virus"), 0), -1, ESlotType.E_COMP_CARGO);
+                    PLShipInfo CurrentShip = PLNetworkManager.Instance.MyLocalPawn.CurrentShip;
+                    CurrentShip.MyStats.AddShipComponent(ReactorPluginManager.CreateReactor(ReactorPluginManager.Instance.GetReactorIDFromName("CryoCore"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(ReactorPluginManager.CreateReactor(ReactorPluginManager.Instance.GetReactorIDFromName("Goodie"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(ReactorPluginManager.CreateReactor(ReactorPluginManager.Instance.GetReactorIDFromName("Deadly"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(new CustomContentTests.AutoTurret.DragonAutoTurret(0, 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(CaptainsChairPluginManager.CreateCaptainsChair(CaptainsChairPluginManager.Instance.GetCaptainsChairIDFromName("Dragon CaptainsChair"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(CPUPluginManager.CreateCPU(CPUPluginManager.Instance.GetCPUIDFromName("Dragon CPU"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(ExtractorPluginManager.CreateExtractor(ExtractorPluginManager.Instance.GetExtractorIDFromName("Dragon Extractor"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(HullPluginManager.CreateHull(HullPluginManager.Instance.GetHullIDFromName("Dragon Hull"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(new CustomContentTests.HullPlating.DragonHullPlating(0, 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(InertiaThrusterPluginManager.CreateInertiaThruster(InertiaThrusterPluginManager.Instance.GetInertiaThrusterIDFromName("Dragon InertiaThruster"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(ManeuverThrusterPluginManager.CreateManeuverThruster(ManeuverThrusterPluginManager.Instance.GetManeuverThrusterIDFromName("Dragon ManeuverThruster"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(new CustomContentTests.MegaTurret.DragonMegaTurret(0, 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(MissilePluginManager.CreateMissile(MissilePluginManager.Instance.GetMissileIDFromName("Dragon Missile"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(MissionShipComponentPluginManager.CreateMissionShipComponent(MissionShipComponentPluginManager.Instance.GetMissionShipComponentIDFromName("Dragon MissionShipComponent"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(NuclearDevicePluginManager.CreateNuclearDevice(NuclearDevicePluginManager.Instance.GetNuclearDeviceIDFromName("Dragon NuclearDevice"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(ShieldPluginManager.CreateShield(ShieldPluginManager.Instance.GetShieldIDFromName("Dragon Shield"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(ThrusterPluginManager.CreateThruster(ThrusterPluginManager.Instance.GetThrusterIDFromName("Dragon Thruster"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(new CustomContentTests.Turret.DragonTurret(0, 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(WarpDrivePluginManager.CreateWarpDrive(WarpDrivePluginManager.Instance.GetWarpDriveIDFromName("Dragon WarpDrive"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(WarpDriveProgramPluginManager.CreateWarpDriveProgram(WarpDriveProgramPluginManager.Instance.GetWarpDriveProgramIDFromName("Dragon WarpDriveProgram"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(WarpDriveProgramPluginManager.CreateWarpDriveProgram(WarpDriveProgramPluginManager.Instance.GetWarpDriveProgramIDFromName("Dragon WarpDriveProgramVirus"), 0), -1, ESlotType.E_COMP_NONE);
                     break;
                 case "addtoinv":
-                    ContentMod.Items.ItemPluginManager.Instance.GetItemIDsFromName("Slime", out int Main, out int Sub);
+                    PulsarPluginLoader.Content.Items.ItemPluginManager.Instance.GetItemIDsFromName("Slime", out int Main, out int Sub);
                     PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
-                    ContentMod.Items.ItemPluginManager.Instance.GetItemIDsFromName("Pizza", out Main, out Sub);
+                    PulsarPluginLoader.Content.Items.ItemPluginManager.Instance.GetItemIDsFromName("Pizza", out Main, out Sub);
                     PLNetworkManager.Instance.LocalPlayer.MyInventory.UpdateItem(PLServer.Instance.PawnInvItemIDCounter++, Main, Sub, 0, -1);
                     break;
             }

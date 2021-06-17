@@ -38,9 +38,6 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="ContentMod">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\Plugins\ContentMod.dll</HintPath>
-    </Reference>
     <Reference Include="PulsarPluginLoader">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\PulsarPluginLoader.dll</HintPath>
     </Reference>
@@ -72,7 +69,8 @@
     <Compile Include="Components\DragonMissile.cs" />
     <Compile Include="Components\DragonMissionShipComponent.cs" />
     <Compile Include="Components\DragonNuclearDevice.cs" />
-    <Compile Include="Components\Reactor\DragonReactor.cs" />
+    <Compile Include="Components\PolytechModule\DragonModule.cs" />
+    <Compile Include="Components\Reactor\CryoCore.cs" />
     <Compile Include="Components\DragonShield.cs" />
     <Compile Include="Components\DragonThruster.cs" />
     <Compile Include="Components\DragonTurret.cs" />
@@ -91,7 +89,7 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>SET PLUGIN_DIR="D:\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\Plugins\"
+    <PostBuildEvent>SET PLUGIN_DIR="D:\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\PULSAR_LostColony_Data\Managed\Mods\"
 
 IF EXIST %25PLUGIN_DIR%25 (
     ECHO Copying DLLs to Plugins directory...

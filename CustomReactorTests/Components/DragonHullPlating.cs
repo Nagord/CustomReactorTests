@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.HullPlating;
+﻿using PulsarPluginLoader.Content.Components.HullPlating;
 
 namespace CustomContentTests.HullPlating
 {

@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.ManeuverThruster;
+﻿using PulsarPluginLoader.Content.Components.ManeuverThruster;
 
 namespace CustomContentTests.ManeuverThruster
 {

@@ -1,4 +1,4 @@
-﻿using ContentMod.Items;
+﻿using PulsarPluginLoader.Content.Items;
 using UnityEngine;
 
 namespace CustomContentTests.Items

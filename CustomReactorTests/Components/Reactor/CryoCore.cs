@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.Reactor;
+﻿using PulsarPluginLoader.Content.Components.Reactor;
 using UnityEngine;
 
 namespace CustomContentTests.Reactor

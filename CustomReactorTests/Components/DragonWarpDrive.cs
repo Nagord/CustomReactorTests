@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.WarpDrive;
+﻿using PulsarPluginLoader.Content.Components.WarpDrive;
 
 namespace CustomContentTests.WarpDrive
 {

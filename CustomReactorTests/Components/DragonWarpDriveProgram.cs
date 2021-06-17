@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.WarpDriveProgram;
+﻿using PulsarPluginLoader.Content.Components.WarpDriveProgram;
 
 namespace CustomContentTests.WarpDriveProgram
 {
@@ -9,6 +9,8 @@ namespace CustomContentTests.WarpDriveProgram
         public override string Description => "Who knows?";
 
         public override bool Experimental => true;
+
+        public override float ActiveTime => base.ActiveTime;
 
         public override void FinalLateAddStats(PLShipComponent InComp)
         {

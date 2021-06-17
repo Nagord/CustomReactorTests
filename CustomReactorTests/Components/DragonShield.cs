@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.Shield;
+﻿using PulsarPluginLoader.Content.Components.Shield;
 
 namespace CustomContentTests.Shield
 {

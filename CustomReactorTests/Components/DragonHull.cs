@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.Hull;
+﻿using PulsarPluginLoader.Content.Components.Hull;
 
 namespace CustomContentTests.Hull
 {

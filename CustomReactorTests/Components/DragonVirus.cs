@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.Virus;
+﻿using PulsarPluginLoader.Content.Components.Virus;
 
 namespace CustomContentTests.Virus
 {

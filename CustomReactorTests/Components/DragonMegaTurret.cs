@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.MegaTurret;
+﻿using PulsarPluginLoader.Content.Components.MegaTurret;
 using UnityEngine;
 
 namespace CustomContentTests.MegaTurret

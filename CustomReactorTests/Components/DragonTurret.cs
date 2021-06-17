@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.Turret;
+﻿using PulsarPluginLoader.Content.Components.Turret;
 
 namespace CustomContentTests.Turret
 {

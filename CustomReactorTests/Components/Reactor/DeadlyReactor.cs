@@ -1,8 +1,8 @@
 ﻿namespace CustomContentTests.Reactor
 {
-    class DeadlyReactor : DragonReactor.Components.Reactor.ReactorPlugin
+    class DeadlyReactor : PulsarPluginLoader.Content.Components.Reactor.ReactorPlugin
     {
-        public override string Name => "Goodie";
+        public override string Name => "Deadly";
 
         public override string Description => "Idk, I just make things";
 

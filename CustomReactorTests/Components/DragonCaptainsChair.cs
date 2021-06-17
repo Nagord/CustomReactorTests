@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.CaptainsChair;
+﻿using PulsarPluginLoader.Content.Components.CaptainsChair;
 
 namespace CustomContentTests.CaptainsChair
 {

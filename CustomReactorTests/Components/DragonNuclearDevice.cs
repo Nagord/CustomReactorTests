@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.NuclearDevice;
+﻿using PulsarPluginLoader.Content.Components.NuclearDevice;
 
 namespace CustomContentTests.NuclearDevice
 {

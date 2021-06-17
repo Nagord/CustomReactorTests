@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.Extractor;
+﻿using PulsarPluginLoader.Content.Components.Extractor;
 
 namespace CustomContentTests.Extractor
 {

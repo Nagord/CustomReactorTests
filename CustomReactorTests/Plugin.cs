@@ -5,22 +5,22 @@ namespace CustomContentTests
 {
     public class Plugin : PulsarPlugin
     {
-        Plugin()
+        public Plugin()
         {
-            Global.PizzaAssetBundle = AssetBundle.LoadFromFile(Application.dataPath + "/Managed/Plugins/CustomComponentTests/pizza.pizza");
+            Global.PizzaAssetBundle = AssetBundle.LoadFromFile(Application.dataPath + "/Managed/Mods/CustomComponentTests/pizza.pizza");
             Global.PizzaAsset = Global.PizzaAssetBundle.LoadAsset<GameObject>("Assets/Pizza.prefab");
         }
         public override string Version => "0.0.2";
 
         public override string Author => "Dragon";
 
-        public override string LongDescription => "Creates custom content, meant as examples for ContentMod";
+        public override string LongDescription => "Creates custom content, meant as examples for PulsarPluginLoader.Content";
 
-        public override string Name => "ComponentTests";
+        public override string Name => "CustomContentTests";
 
         public override string HarmonyIdentifier()
         {
-            return "Dragon.ComponentTests";
+            return "Dragon.CustomContentTests";
         }
     }
 }

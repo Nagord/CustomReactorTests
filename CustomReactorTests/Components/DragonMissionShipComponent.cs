@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.MissionShipComponent;
+﻿using PulsarPluginLoader.Content.Components.MissionShipComponent;
 namespace CustomContentTests.MissionShipComponent
 {
     class DragonMissionShipComponent : MissionShipComponentPlugin

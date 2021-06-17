@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.CPU;
+﻿using PulsarPluginLoader.Content.Components.CPU;
 using UnityEngine;
 
 namespace CustomContentTests.CPU

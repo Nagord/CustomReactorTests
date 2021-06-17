@@ -1,4 +1,4 @@
-﻿using ContentMod.Components.InertiaThruster;
+﻿using PulsarPluginLoader.Content.Components.InertiaThruster;
 
 namespace CustomContentTests.InertiaThruster
 {
