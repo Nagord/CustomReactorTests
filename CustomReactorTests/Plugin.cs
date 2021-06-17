@@ -10,7 +10,7 @@ namespace CustomContentTests
             Global.PizzaAssetBundle = AssetBundle.LoadFromFile(Application.dataPath + "/Managed/Mods/CustomComponentTests/pizza.pizza");
             Global.PizzaAsset = Global.PizzaAssetBundle.LoadAsset<GameObject>("Assets/Pizza.prefab");
         }
-        public override string Version => "0.0.2";
+        public override string Version => "0.0.3";
 
         public override string Author => "Dragon";
 
