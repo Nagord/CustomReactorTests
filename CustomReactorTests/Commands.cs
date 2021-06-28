@@ -15,6 +15,7 @@ using PulsarPluginLoader.Content.Components.MissionShipComponent;
 using PulsarPluginLoader.Content.Components.CPU;
 using PulsarPluginLoader.Content.Components.WarpDriveProgram;
 using PulsarPluginLoader.Content.Components.PolytechModule;
+using PulsarPluginLoader.Content.Components.FBRecipeModule;
 
 
 namespace CustomReactorTests
@@ -63,6 +64,8 @@ namespace CustomReactorTests
                     CurrentShip.MyStats.AddShipComponent(WarpDriveProgramPluginManager.CreateWarpDriveProgram(WarpDriveProgramPluginManager.Instance.GetWarpDriveProgramIDFromName("Dragon WarpDriveProgram"), 0), -1, ESlotType.E_COMP_NONE);
                     CurrentShip.MyStats.AddShipComponent(WarpDriveProgramPluginManager.CreateWarpDriveProgram(WarpDriveProgramPluginManager.Instance.GetWarpDriveProgramIDFromName("Dragon WarpDriveProgramVirus"), 0), -1, ESlotType.E_COMP_NONE);
                     CurrentShip.MyStats.AddShipComponent(PolytechModulePluginManager.CreatePolytechModule(PolytechModulePluginManager.Instance.GetPolytechModuleIDFromName("P.T. Module: Mass Annihilator"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(FBRecipeModulePluginManager.CreateFBRecipeModule(FBRecipeModulePluginManager.Instance.GetFBRecipeModuleIDFromName("Phase Pistol"), 0), -1, ESlotType.E_COMP_NONE);
+                    CurrentShip.MyStats.AddShipComponent(FBRecipeModulePluginManager.CreateFBRecipeModule(FBRecipeModulePluginManager.Instance.GetFBRecipeModuleIDFromName("Pizza"), 0), -1, ESlotType.E_COMP_NONE);
                     break;
                 case "addtoinv":
                     PulsarPluginLoader.Content.Items.ItemPluginManager.Instance.GetItemIDsFromName("Slime", out int Main, out int Sub);

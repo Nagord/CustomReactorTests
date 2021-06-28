@@ -80,6 +80,8 @@
     <Compile Include="Components\DragonWarpDriveProgramVirus.cs" />
     <Compile Include="Components\Reactor\Goodie.cs" />
     <Compile Include="Components\Reactor\DeadlyReactor.cs" />
+    <Compile Include="Components\RecipeModule\Phase Pistol Recipe.cs" />
+    <Compile Include="Components\RecipeModule\Pizza Recipe.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Items\PizzaPawnItem.cs" />
     <Compile Include="Items\SlimePawnItem.cs" />
