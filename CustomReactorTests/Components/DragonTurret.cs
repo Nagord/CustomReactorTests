@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.Turret;
+﻿using PulsarModLoader.Content.Components.Turret;
 
 namespace CustomContentTests.Turret
 {
-    class DragonTurretPlugin : TurretPlugin
+    class DragonTurretMod : TurretMod
     {
         public override PLShipComponent PLTurret => new DragonTurret();
 
@@ -12,7 +12,7 @@ namespace CustomContentTests.Turret
     {
         public DragonTurret(int inLevel = 0, int inSubTypeData = 1) : base(0)
         {
-            SubType = TurretPluginManager.Instance.GetTurretIDFromName("MegaDragonCannon");
+            SubType = TurretModManager.Instance.GetTurretIDFromName("MegaDragonCannon");
             Name = "MegaDragonCannon";
             Desc = "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm";
             m_Damage = 500f;

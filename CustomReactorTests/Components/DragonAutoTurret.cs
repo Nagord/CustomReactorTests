@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.AutoTurret;
+﻿using PulsarModLoader.Content.Components.AutoTurret;
 
 namespace CustomContentTests.AutoTurret
 {
-    class DragonAutoTurretPlugin : AutoTurretPlugin
+    class DragonAutoTurretMod : AutoTurretMod
     {
         public override PLShipComponent PLAutoTurret => new DragonAutoTurret();
 
@@ -12,7 +12,7 @@ namespace CustomContentTests.AutoTurret
     {
         public DragonAutoTurret(int inLevel = 0, int inSubTypeData = 1) : base(0)
         {
-            SubType = AutoTurretPluginManager.Instance.GetAutoTurretIDFromName("DragonAutoTurret");
+            SubType = AutoTurretModManager.Instance.GetAutoTurretIDFromName("DragonAutoTurret");
             Name = "DragonAutoTurret";
             Desc = "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm";
             m_Damage = 10f;

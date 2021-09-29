@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.WarpDriveProgram;
+﻿using PulsarModLoader.Content.Components.WarpDriveProgram;
 
 namespace CustomContentTests.WarpDriveProgram
 {
-    class DragonWarpDriveProgramVirus : WarpDriveProgramPlugin
+    class DragonWarpDriveProgramVirus : WarpDriveProgramMod
     {
         public override string Name => "Dragon WarpDriveProgramVirus";
 
@@ -10,7 +10,7 @@ namespace CustomContentTests.WarpDriveProgram
 
         public override bool Experimental => true;
 
-        public override int VirusSubtype => PulsarPluginLoader.Content.Components.Virus.VirusPluginManager.Instance.GetVirusIDFromName("Dragon Virus");
+        public override int VirusSubtype => PulsarModLoader.Content.Components.Virus.VirusModManager.Instance.GetVirusIDFromName("Dragon Virus");
 
         public override bool IsVirus => true;
     }

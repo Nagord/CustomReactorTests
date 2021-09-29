@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.InertiaThruster;
+﻿using PulsarModLoader.Content.Components.InertiaThruster;
 
 namespace CustomContentTests.InertiaThruster
 {
-    class DragonInertiaThruster : InertiaThrusterPlugin
+    class DragonInertiaThruster : InertiaThrusterMod
     {
         public override string Name => "Dragon InertiaThruster";
 

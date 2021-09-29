@@ -1,9 +1,9 @@
-﻿using PulsarPluginLoader.Content.Components.CPU;
+﻿using PulsarModLoader.Content.Components.CPU;
 using UnityEngine;
 
 namespace CustomContentTests.CPU
 {
-    class DragonCPU : CPUPlugin
+    class DragonCPU : CPUMod
     {
         public override string Name => "Dragon CPU";
 
@@ -47,7 +47,7 @@ namespace CustomContentTests.CPU
 
         public override void WhenProgramIsRun(PLWarpDriveProgram inProgram)
         {
-            PulsarPluginLoader.Utilities.Messaging.Notification("WarpdProgram thing running because of " + inProgram.Name);
+            PulsarModLoader.Utilities.Messaging.Notification("WarpdProgram thing running because of " + inProgram.Name);
         }
     }
 }

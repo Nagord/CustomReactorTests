@@ -1,9 +1,9 @@
-﻿using PulsarPluginLoader.Content.Components.Reactor;
+﻿using PulsarModLoader.Content.Components.Reactor;
 using UnityEngine;
 
 namespace CustomContentTests.Reactor
 {
-    class CryoCore : ReactorPlugin
+    class CryoCore : ReactorMod
     {
         public override string Name => "CryoCore";
 

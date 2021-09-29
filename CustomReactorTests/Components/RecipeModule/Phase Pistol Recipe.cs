@@ -1,6 +1,6 @@
 ﻿namespace CustomContentTests.Components.RecipeModule
 {
-    class PhasePistolRecipe : PulsarPluginLoader.Content.Components.FBRecipeModule.FBRecipeModulePlugin
+    class PhasePistolRecipe : PulsarModLoader.Content.Components.FBRecipeModule.FBRecipeModuleMod
     {
         public override int[] ItemTypeToProduce => new int[] { 2, 0 };
 

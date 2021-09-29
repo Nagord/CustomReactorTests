@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.Hull;
+﻿using PulsarModLoader.Content.Components.Hull;
 
 namespace CustomContentTests.Hull
 {
-    class DragonHull : HullPlugin
+    class DragonHull : HullMod
     {
         public override string Name => "Dragon Hull";
 

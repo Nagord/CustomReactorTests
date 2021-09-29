@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.Missile;
+﻿using PulsarModLoader.Content.Components.Missile;
 
 namespace CustomContentTests.Missile
 {
-    class DragonMissile : MissilePlugin
+    class DragonMissile : MissileMod
     {
         public override string Name => "Dragon Missile";
 

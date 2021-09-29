@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.Virus;
+﻿using PulsarModLoader.Content.Components.Virus;
 
 namespace CustomContentTests.Virus
 {
-    class DragonVirus : VirusPlugin
+    class DragonVirus : VirusMod
     {
         public override string Name => "Dragon Virus";
 

@@ -1,9 +1,9 @@
-﻿using PulsarPluginLoader.Content.Items;
+﻿using PulsarModLoader.Content.Items;
 using UnityEngine;
 
 namespace CustomContentTests.Items
 {
-    class SlimePawnItem : ItemPlugin
+    class SlimePawnItem : ItemMod
     {
         public override string Name => "Slime";
 
@@ -17,8 +17,9 @@ namespace CustomContentTests.Items
             Desc = "I want to slide down your throat";
         }
 
-        public override string GetItemName()
+        public override string GetItemName(bool skipLocalization = false)
         {
+            base.GetItemName(skipLocalization);
             return "Slime";
         }
         public override GameObject GetVisualPrefab()

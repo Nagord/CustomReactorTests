@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.WarpDrive;
+﻿using PulsarModLoader.Content.Components.WarpDrive;
 
 namespace CustomContentTests.WarpDrive
 {
-    class DragonWarpDrive : WarpDrivePlugin
+    class DragonWarpDrive : WarpDriveMod
     {
         public override string Name => "Dragon WarpDrive";
 

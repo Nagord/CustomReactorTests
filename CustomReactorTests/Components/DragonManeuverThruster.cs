@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.ManeuverThruster;
+﻿using PulsarModLoader.Content.Components.ManeuverThruster;
 
 namespace CustomContentTests.ManeuverThruster
 {
-    class DragonManeuverThruster : ManeuverThrusterPlugin
+    class DragonManeuverThruster : ManeuverThrusterMod
     {
         public override string Name => "Dragon ManeuverThruster";
 

@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.NuclearDevice;
+﻿using PulsarModLoader.Content.Components.NuclearDevice;
 
 namespace CustomContentTests.NuclearDevice
 {
-    class DragonNuclearDevice : NuclearDevicePlugin
+    class DragonNuclearDevice : NuclearDeviceMod
     {
         public override string Name => "Dragon NuclearDevice";
 

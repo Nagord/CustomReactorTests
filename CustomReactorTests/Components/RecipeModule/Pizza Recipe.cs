@@ -1,12 +1,12 @@
 ﻿namespace CustomContentTests.Components.RecipeModule
 {
-    class PizzaRecipe : PulsarPluginLoader.Content.Components.FBRecipeModule.FBRecipeModulePlugin
+    class PizzaRecipe : PulsarModLoader.Content.Components.FBRecipeModule.FBRecipeModuleMod
     {
         public override int[] ItemTypeToProduce
         {
             get
             {
-                PulsarPluginLoader.Content.Items.ItemPluginManager.Instance.GetItemIDsFromName("Pizza", out int main, out int sub);
+                PulsarModLoader.Content.Items.ItemModManager.Instance.GetItemIDsFromName("Pizza", out int main, out int sub);
                 return new int[] { main, sub };
             }
         }

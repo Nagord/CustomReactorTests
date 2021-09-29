@@ -1,11 +1,11 @@
 ﻿using HarmonyLib;
 using System.Collections.Generic;
 using System.Reflection.Emit;
-using static PulsarPluginLoader.Patches.HarmonyHelpers;
+using static PulsarModLoader.Patches.HarmonyHelpers;
 
 namespace CustomContentTests.Components.PolytechModule
 {
-    class DragonModule : PulsarPluginLoader.Content.Components.PolytechModule.PolytechModulePlugin
+    class DragonModule : PulsarModLoader.Content.Components.PolytechModule.PolytechModuleMod
     {
         public override string Name => "P.T. Module: Mass Annihilator";
 
@@ -46,7 +46,7 @@ namespace CustomContentTests.Components.PolytechModule
         }
         public static void PatchMethod(PLShipInfoBase inShipInfo, PLPoweredShipComponent plpoweredShipComponent)
         {
-            if (plpoweredShipComponent.ActualSlotType == ESlotType.E_COMP_POLYTECH_MODULE && plpoweredShipComponent.SubType == PulsarPluginLoader.Content.Components.PolytechModule.PolytechModulePluginManager.Instance.GetPolytechModuleIDFromName("P.T. Module: Mass Annihilator"))
+            if (plpoweredShipComponent.ActualSlotType == ESlotType.E_COMP_POLYTECH_MODULE && plpoweredShipComponent.SubType == PulsarModLoader.Content.Components.PolytechModule.PolytechModuleModManager.Instance.GetPolytechModuleIDFromName("P.T. Module: Mass Annihilator"))
             {
                 inShipInfo.MyStats.ReactorBoostedOutputMax *= 1.7f;
             }

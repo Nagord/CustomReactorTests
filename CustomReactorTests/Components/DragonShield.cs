@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.Shield;
+﻿using PulsarModLoader.Content.Components.Shield;
 
 namespace CustomContentTests.Shield
 {
-    class DragonShield : ShieldPlugin
+    class DragonShield : ShieldMod
     {
         public override string Name => "Dragon Shield";
 

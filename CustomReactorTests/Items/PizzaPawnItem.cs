@@ -1,9 +1,9 @@
-﻿using PulsarPluginLoader.Content.Items;
+﻿using PulsarModLoader.Content.Items;
 using UnityEngine;
 
 namespace CustomContentTests.Items
 {
-    class PizzaPawnItemPlugin : ItemPlugin
+    class PizzaPawnItemMod : ItemMod
     {
         public override string Name => "Pizza";
 
@@ -16,8 +16,9 @@ namespace CustomContentTests.Items
             HealAmt = 50f;
             m_Desc = "Bobs your uncle and I'm a pizza.";
         }
-        public override string GetItemName()
+        public override string GetItemName(bool skipLocalization = false)
         {
+            base.GetItemName(skipLocalization);
             return "Pizza";
         }
         public override GameObject GetVisualPrefab()

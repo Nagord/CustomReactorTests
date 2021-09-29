@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.CaptainsChair;
+﻿using PulsarModLoader.Content.Components.CaptainsChair;
 
 namespace CustomContentTests.CaptainsChair
 {
-    class DragonCaptainsChair : CaptainsChairPlugin
+    class DragonCaptainsChair : CaptainsChairMod
     {
         public override string Name => "Dragon CaptainsChair";
 

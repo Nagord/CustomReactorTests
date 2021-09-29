@@ -1,20 +1,21 @@
-﻿using PulsarPluginLoader;
+﻿using PulsarModLoader;
+using System.IO;
 using UnityEngine;
 
 namespace CustomContentTests
 {
-    public class Plugin : PulsarPlugin
+    public class Mod : PulsarMod
     {
-        public Plugin()
+        public Mod()
         {
-            Global.PizzaAssetBundle = AssetBundle.LoadFromFile(Application.dataPath + "/Managed/Mods/CustomComponentTests/pizza.pizza");
+            Global.PizzaAssetBundle = AssetBundle.LoadFromFile( Path.Combine(Directory.GetCurrentDirectory(), "Mods/CustomComponentTests/pizza.pizza"));
             Global.PizzaAsset = Global.PizzaAssetBundle.LoadAsset<GameObject>("Assets/Pizza.prefab");
         }
         public override string Version => "0.0.3";
 
         public override string Author => "Dragon";
 
-        public override string LongDescription => "Creates custom content, meant as examples for PulsarPluginLoader.Content";
+        public override string LongDescription => "Creates custom content, meant as examples for PulsarModLoader.Content";
 
         public override string Name => "CustomContentTests";
 

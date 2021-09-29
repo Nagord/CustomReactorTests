@@ -1,7 +1,7 @@
-﻿using PulsarPluginLoader.Content.Components.MissionShipComponent;
+﻿using PulsarModLoader.Content.Components.MissionShipComponent;
 namespace CustomContentTests.MissionShipComponent
 {
-    class DragonMissionShipComponent : MissionShipComponentPlugin
+    class DragonMissionShipComponent : MissionShipComponentMod
     {
         public override string Name => "Dragon MissionShipComponent";
     }

@@ -1,6 +1,6 @@
 ﻿namespace CustomContentTests.Reactor
 {
-    class DeadlyReactor : PulsarPluginLoader.Content.Components.Reactor.ReactorPlugin
+    class DeadlyReactor : PulsarModLoader.Content.Components.Reactor.ReactorMod
     {
         public override string Name => "Deadly";
 

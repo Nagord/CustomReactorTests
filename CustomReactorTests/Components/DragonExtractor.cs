@@ -1,8 +1,8 @@
-﻿using PulsarPluginLoader.Content.Components.Extractor;
+﻿using PulsarModLoader.Content.Components.Extractor;
 
 namespace CustomContentTests.Extractor
 {
-    class DragonExtractor : ExtractorPlugin
+    class DragonExtractor : ExtractorMod
     {
         public override string Name => "Dragon Extractor";
 

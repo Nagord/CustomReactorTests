@@ -1,9 +1,9 @@
-﻿using PulsarPluginLoader.Content.Components.MegaTurret;
+﻿using PulsarModLoader.Content.Components.MegaTurret;
 using UnityEngine;
 
 namespace CustomContentTests.MegaTurret
 {
-    class DragonMegaTurretPlugin : MegaTurretPlugin
+    class DragonMegaTurretMod : MegaTurretMod
     {
         public override PLShipComponent PLMegaTurret => new DragonMegaTurret();
 
@@ -13,7 +13,7 @@ namespace CustomContentTests.MegaTurret
     {
         public DragonMegaTurret(int inLevel = 0, int inSubTypeData = 1) : base(0)
         {
-            SubType = MegaTurretPluginManager.Instance.GetMegaTurretIDFromName("MegaDragonCannon");
+            SubType = MegaTurretModManager.Instance.GetMegaTurretIDFromName("MegaDragonCannon");
             Name = "MegaDragonCannon";
             Desc = "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm";
             m_Damage = 999999999f;
